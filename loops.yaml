@@ -1,0 +1,13 @@
+- name: loops
+  hosts: ANS
+  become: yes
+  tasks:
+  - name: install nginx
+    ansible.builtin.package:
+      name: "{{item}}"
+      state: present
+    loop: 
+    - mysql
+    - nginx
+    - server
+   

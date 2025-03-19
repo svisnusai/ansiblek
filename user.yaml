@@ -1,0 +1,15 @@
+- name: create user
+  hosts: ANS
+  become: yes
+  tasks:
+  - name: check user
+    ansible.builtin.command: id expense
+    register: user #it is variable and gets input from above command
+    ignore_error: True
+  - name: print the user information
+    ansible.builtin.debug:
+      msg: "user info: {{user}}"
+  - name: create user
+    ansible.builtin.command: useradd expense
+    when: user.rc != 0
+
