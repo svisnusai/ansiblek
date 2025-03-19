@@ -9,11 +9,11 @@
     - online
     - aws
     - azure
-  live: true #boolean
-  uses: #map/dictionary(key&value base)
-    ci: jenkins
-    cm: ansible
-    cloud: aws  
+    live: true #boolean
+    uses: #map/dictionary(key&value base)
+      ci: jenkins
+      cm: ansible
+      cloud: aws  
   tasks:
   - name: string
     ansible.builtin.debug:
