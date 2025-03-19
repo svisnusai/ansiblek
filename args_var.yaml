@@ -1,0 +1,6 @@
+- name: playlevel var
+  hosts: ANS
+  tasks:
+  - name: print course details
+    ansible.builtin.debug:
+        msg: "{{course}}, {{cloud}}, {{server}}"
