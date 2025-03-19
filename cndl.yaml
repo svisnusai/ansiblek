@@ -1,5 +1,6 @@
 - name: cndl statement
   hosts: local
+  connection: local
   vars_prompt:
   - name: your_no
     prompt: enter a number
