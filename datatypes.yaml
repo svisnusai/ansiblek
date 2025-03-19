@@ -1,0 +1,20 @@
+- name: datatypes
+  hosts: local
+  vars:
+    course: this is devops #string
+    cloud: 01 #interger
+    details: #list
+    - devops
+    - computing
+    - online
+    - aws
+    - azure
+  live: true #boolean
+  uses: #map/dictionary(key&value base)
+    ci: jenkins
+    cm: ansible
+    cloud: aws  
+  tasks:
+  - name: string
+    ansible.builtin.debug:
+      msg: "{{course}} and No. {{cloud}}, sylabus is {{details}}, live: {{live}}, useful for {{uses}}"
