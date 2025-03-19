@@ -1,0 +1,8 @@
+- name: playlevel var
+  hosts: ANS
+  vars_files:
+  - files_var.yaml
+  tasks:
+  - name: print course details
+    ansible.builtin.debug:
+        msg: "{{course}}, {{cloud}}, {{server}}"
