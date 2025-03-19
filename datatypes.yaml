@@ -1,5 +1,6 @@
 - name: datatypes
   hosts: local
+  connection: local
   vars:
     course: this is devops #string
     cloud: 01 #interger
