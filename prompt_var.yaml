@@ -3,10 +3,13 @@
   vars_prompt:
   - name: course
     prompt: enter the course name
+    private: false
   - name: cloud
     prompt: enter the cloud name
+    private: false
   - name: server
     prompt: enter the server name
+    private: false
   tasks:
   - name: print course details
     ansible.builtin.debug:
