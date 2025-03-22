@@ -1,0 +1,13 @@
+- name: check user
+  hosts: ANS
+  become: yes
+  tasks:
+  - name: check user
+    ansible.builtin.command: id expense
+    register: user
+  - name: print the user
+    ansible.builtin.debug:
+      msg: "{{user}}"
+  - name: create user
+    ansible.builtin.command: useradd
+    when: user.rc != 0
