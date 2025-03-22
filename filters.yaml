@@ -4,6 +4,6 @@
   tasks:
   - name: convert to lowercase
     vars:
-      fun: driving is a fun
+      fun: driving
     ansible.builtin.debug:
       msg: "{{ fun | upper }}"
