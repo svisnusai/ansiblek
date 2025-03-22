@@ -4,4 +4,8 @@
   tasks:
   - name: cm vs sh
     ansible.builtin.shell: ls -l > /tmp/output.txt
+  
+  - name: cm vs sh
+    ansible.builtin.shell: ps -ef | grep ssh
+    register: data
     
