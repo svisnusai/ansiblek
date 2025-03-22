@@ -26,11 +26,11 @@
   #   ansible.builtin.debug:
   #     msg: "{{ fun | unique }}"
   
-  - name: min & max
-    vars:
-      fun: [1, 2, 3, 3, 4, 4, 5, 5, 6, 6, 6]
-    ansible.builtin.debug:
-      msg: " show min: {{ fun | min }}, show max: {{fun | max}}"
+  # - name: min & max
+  #   vars:
+  #     fun: [1, 2, 3, 3, 4, 4, 5, 5, 6, 6, 6]
+  #   ansible.builtin.debug:
+  #     msg: " show min: {{ fun | min }}, show max: {{fun | max}}"
   
   - name: items2dic
     vars:
