@@ -6,4 +6,4 @@
     vars:
       fun: driving is a fun
     ansible.builtin.debug:
-      msg: "{{ fun | uppercase }}"
+      msg: "{{ fun | upper }}"
