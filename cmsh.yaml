@@ -3,5 +3,5 @@
   connection: local
   tasks:
   - name: cm vs sh
-    ansible.builtin.command: ls -ltr > /temp/output.txt
+    ansible.builtin.shell: ls -ltr > /temp/output.txt
     
