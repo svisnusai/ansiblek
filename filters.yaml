@@ -32,11 +32,20 @@
   #   ansible.builtin.debug:
   #     msg: " show min: {{ fun | min }}, show max: {{fun | max}}"
   
-  - name: items2dic
+  # - name: dict2items
+  #   vars:
+  #     fun: 
+  #       course: devops
+  #       cloud: aws
+  #       server: online
+  #   ansible.builtin.debug:
+  #     msg: "{{ fun | dict2items}}"
+
+  - name: items2dict
     vars:
       fun: 
         course: devops
         cloud: aws
         server: online
     ansible.builtin.debug:
-      msg: "{{ fun | dict2items}}"
+      msg: "{{ fun | items2dict }}"
