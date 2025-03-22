@@ -1,0 +1,7 @@
+- name: handling undefined variable
+  hosts: ANS
+  become: yes
+  tasks:
+  - name: print the variable
+  ansible.inbuilt.debug:
+    msg: "{{course}} | default: {{aws}}"
