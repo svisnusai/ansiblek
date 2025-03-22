@@ -1,6 +1,6 @@
 - name: cmmand vs shell
-  hosts: local
-  connection: local
+  hosts: ANS
+  become: yes
   tasks:
   - name: cm vs sh
     ansible.builtin.shell: ls -ltr > /tmp/output.txt
