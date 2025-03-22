@@ -1,0 +1,12 @@
+- name: 
+  hosts: ANS
+  become: yes
+  tasks:
+  - name: create loop
+    ansible.builtin.package:
+      name: item
+      state: present
+    details:
+    - mysql
+    - nginx
+    - postgress
