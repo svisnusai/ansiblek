@@ -44,8 +44,8 @@
   - name: items2dict
     vars:
       fun: 
-        course: devops
-        cloud: aws
-        server: online
+      - { "key": "course", "value": "devops" }
+      - { "key": "cloud", "value": "aws" }
+      - { "key": "server", "value": "online" }
     ansible.builtin.debug:
       msg: "{{ fun | items2dict }}"
