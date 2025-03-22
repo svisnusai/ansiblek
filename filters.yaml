@@ -22,6 +22,6 @@
   
   - name: convert to uppercase
     vars:
-      fun: "(1, 2, 3, 3, 4, 4, 5, 5, 6, 6, 6 )"
+      fun: [1, 2, 3, 3, 4, 4, 5, 5, 6, 6, 6]
     ansible.builtin.debug:
       msg: "{{ fun | unique }}"
