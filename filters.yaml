@@ -1,0 +1,9 @@
+- name: functions
+  hosts: ANS
+  become: Yes
+  tasks:
+  - name: convert to lowercase
+    vars:
+      fun: driving is a fun
+    ansible.builtin.debug:
+      msg: "{{ fun | uppercase }}"
