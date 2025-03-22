@@ -31,3 +31,12 @@
       fun: [1, 2, 3, 3, 4, 4, 5, 5, 6, 6, 6]
     ansible.builtin.debug:
       msg: " show min: {{ fun | min }}, show max: {{fun | max}}"
+  
+  - name: items2dic
+    vars:
+      fun: 
+        course: devops
+        cloud: aws
+        server: online
+    ansible.builtin.debug:
+      msg: "{{ fun | dict2items}}"
