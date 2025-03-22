@@ -3,5 +3,5 @@
   become: yes
   tasks:
   - name: cm vs sh
-    ansible.builtin.shell: ls -ltr > /tmp/output.txt
+    ansible.builtin.shell: ls -l > /tmp/output.txt
     
