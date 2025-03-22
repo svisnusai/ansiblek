@@ -41,11 +41,17 @@
   #   ansible.builtin.debug:
   #     msg: "{{ fun | dict2items}}"
 
-  - name: items2dict
+  # - name: items2dict
+  #   vars:
+  #     fun: 
+  #     - { "key": "course", "value": "devops" }
+  #     - { "key": "cloud", "value": "aws" }
+  #     - { "key": "server", "value": "online" }
+  #   ansible.builtin.debug:
+  #     msg: "{{ fun | items2dict }}"
+  
+  - name: check ip address
     vars:
-      fun: 
-      - { "key": "course", "value": "devops" }
-      - { "key": "cloud", "value": "aws" }
-      - { "key": "server", "value": "online" }
+      fun: 138.198.1.0
     ansible.builtin.debug:
-      msg: "{{ fun | items2dict }}"
+      msg: "{{ fun | ansible.utils.ipv4 }}"
