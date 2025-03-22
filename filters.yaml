@@ -7,3 +7,21 @@
       fun: "driving is a fun"
     ansible.builtin.debug:
       msg: "{{ fun | lower }}"
+  
+  - name: convert to uppercase
+    vars:
+      fun: "driving is a fun"
+    ansible.builtin.debug:
+      msg: "{{ fun | upper }}"
+  
+  - name: convert to uppercase
+    vars:
+      fun: "driving is a fun"
+    ansible.builtin.debug:
+      msg: "{{ fun | upper }}"
+  
+  - name: convert to uppercase
+    vars:
+      fun: "(1, 2, 3, 3, 4, 4, 5, 5, 6, 6, 6 )"
+    ansible.builtin.debug:
+      msg: "{{ fun | unique }}"
